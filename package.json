@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nikunj-taneja/medihub/issues"
   },
-  "homepage": "https://github.com/nikunj-taneja/medihub#readme"
+  "homepage": "https://github.com/nikunj-taneja/medihub#readme",
+  "dependencies": {
+    "mongoose": "^5.5.12"
+  }
 }

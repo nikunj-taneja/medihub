@@ -1,27 +1,58 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
+const express    = require('express'),
+      app        = express(),
+      bodyParser = require('body-parser'),
+      mongoose   = require('mongoose');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
+mongoose.connect("mongodb://localhost/medihub");
+
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 
-var medications = [
-    {name: "Crocin Advanced", dosage: "3mg"},
-    {name: "Prozac", dosage: "2mg"},
-    {name: "Aspirin", dosage: "5mg"},
-    {name: "Sinarest", dosage: "1mg"},
-    {name: "Dolo", dosage: "0.5mg"},
-];
+// Medication Schema
+let medicationSchema = new mongoose.Schema({
+    name: String,
+    dosage: String,
+    frequency: Number,
+    reminderFrequency: Number,
+    reminderTimes: Array,
+});
+
+let Medication = mongoose.model("Medication", medicationSchema);
+
+// Medication.create({
+//     name: "Aspirin",
+//     dosage: "10mg",
+//     frequency: 2,
+//     reminderFrequency: 2,
+//     reminderTimes: ["0900", "2100"]
+//     }, (err, medication) => {
+//         if (err) {
+//             console.log(`X Error: ${err}`);
+//         }
+//         else {
+//             console.log("Newly added medication: ");
+//             console.log(medication);
+//         }
+//     }
+// );
 
 app.get("/", (req, res) => {
     res.render("home");
 });
 
 app.get("/medications", (req, res) => {
-    res.render("medications", {meds: medications});
+    Medication.find({}, (err, allMedications) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("medications", {meds: allMedications});
+        }
+    });
+    //res.render("medications", {meds: medications});
 });
 
 app.post("/medications", (req, res) => {
@@ -31,8 +62,17 @@ app.post("/medications", (req, res) => {
         name: name,
         dosage: dosage,
     };
-    medications.push(newMed);
-    res.redirect("/medications");
+    //medications.push(newMed);
+    Medication.create(newMed, (err, medication) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            console.log("Newly created medication: ");
+            console.log(medication);
+            res.redirect("/medications");
+        }
+    });
 });
 
 app.get("/medications/new", (req, res) => {
