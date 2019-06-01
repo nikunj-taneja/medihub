@@ -6,50 +6,49 @@ MIT HealthHACK'19
 2. Medications page
 3. Appointments page
 
-#Architecture
-*Home page
-    *emergency button
-    *menu of medical staff
-    *menu of family
-    *menu of caregivers
-    *location
-    *current medicaitons
-    *payment history
-    *insurance companies
+#Home page
+    * emergency button
+    * menu of medical staff
+    * menu of family
+    * menu of caregivers
+    * location
+    * current medicaitons
+    * payment history
+    * insurance companies
 
-*Medications
-    *name
-    *volume/mass (dosage)
-    *time
-    *alarms
-    *frequency/times
-    *checkbox (Whole card of one medication is a checkbox)
-    *hyperlinked to a page with 
-        *picture of the medication
-        *expiry date
-        *inventory
+#Medications
+    * name
+    * volume/mass (dosage)
+    * time
+    * alarms
+    * frequency/times
+    * checkbox (Whole card of one medication is a checkbox)
+    * hyperlinked to a page with 
+        * picture of the medication
+        * expiry date
+        * inventory
 
-*Appointments
-    *Doctor (hyperlink?)
-    *Hospital/Clinic (hyperlink?)
-    *Date and Time
-    *Estimated Cost
-    *Paid for or not
+# Appointments
+    * Doctor (hyperlink?)
+    * Hospital/Clinic (hyperlink?)
+    * Date and Time
+    * Estimated Cost
+    * Paid for or not
 
-*Diagnoses
-    *List of diagnoses
-    *hyperlinked to a page with
-        *diagnosed when
-        *which hospital
-        *which doctor
+# Diagnoses
+    * List of diagnoses
+    * hyperlinked to a page with
+        * diagnosed when
+        * which hospital
+        * which doctor
 
-*Suggestions
-    *Textbox
+# Suggestions
+    * Textbox
 
-*Log
-    *Different logs
-        *Graph/Trend
-        *New inputs
+# Log
+    * Different logs
+        * Graph/Trend
+        * New inputs
 
 
 
