@@ -1,12 +1,12 @@
 # MediHub
 MIT HealthHACK'19
 
-#Objectives
+# Objectives
 1. Design the home page (overview)
 2. Medications page
 3. Appointments page
 
-#Home page
+# Home page
 * emergency button
 * menu of medical staff
 * menu of family
@@ -16,7 +16,7 @@ MIT HealthHACK'19
 * payment history
 * insurance companies
 
-#Medications
+# Medications
 * name
 * volume/mass (dosage)
 * time
