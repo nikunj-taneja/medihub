@@ -1,0 +1,19 @@
+{
+  "name": "medihub",
+  "version": "1.0.0",
+  "description": "MediHub - A all-in-one-place app to keep track of your health",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikunj-taneja/medihub.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikunj-taneja/medihub/issues"
+  },
+  "homepage": "https://github.com/nikunj-taneja/medihub#readme"
+}

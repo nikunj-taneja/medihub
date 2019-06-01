@@ -1,0 +1,13 @@
+<% include partials/header %>
+<h1>Welcome to MediHub!</h1>
+<h3>Add a New Medication:</h3>
+    <form action="/medications" method="POST">
+        <input type="text" name="name" placeholder="Name">
+        <br>
+        <input type="text" name="dosage" placeholder="Dosage">
+        <br>
+        <button>Add medication</button>
+        <br>
+    </form>
+</h1>
+<% include partials/footer %>

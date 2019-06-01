@@ -1,0 +1,11 @@
+<% include partials/header %>
+
+<h1>Welcome to MediHub!</h1>
+<h2>Medicaitons: </h2>
+<ul>
+    <% meds.forEach((med) => { %>
+        <li><%= med.name %></li>
+    <% }); %>
+</ul>
+
+<% include partials/footer %>
