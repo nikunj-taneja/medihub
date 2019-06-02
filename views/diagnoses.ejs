@@ -1,39 +1,27 @@
 <% include partials/header %>
   <div class="w3-container">
-    <h3><b>Add New Medication</b></h3>
-    <form action="/medications" method="POST">
-		<b>Name of Drug:</b><br>
-        <input type="text" name="name" placeholder="Name">
-        <br>
-		<b>Dosage Amount:</b><br>
-        <input type="text" name="amount" placeholder="mg/mL">
-        <br>
-		<b>Frequency:</b><br>
-        <input type="text" name="frequency" placeholder="Times a day">
-        <br>
-		<b>Roue of Administration</b><br>
-		<input type="text" name="route" placeholder="Route of Administration">
-		<br>
-		<b>Timings (list all):</b><br>
-		<input type="text" name="timings" placeholder="Timings">
-		<br>
-		<button class="w3-button w3-black">Save & Add Timing</button>
-		<br>
-		<b>Reminders (number and minutes before):</b> <br>
-		<input type="text" name="number of reminders" placeholder="Number of Reminders">
-		<br>
-		<input type="text" name="minutes before" placeholder="Minutes Before Intake">
-		<br>
-		<b>Necessity:</b><br>
-		<input type="radio" name="necessity" value="Critical"> Critical<br>
-		<input type="radio" name="necessity" value="Supplementary"> Supplementary<br>
-		<input type="radio" name="necessity" value="Optional"> Optional<br>
-		<br>
-        <input type="submit" value="Add Medication">
-        <br>
-		<br>
-    </form>
+    <h5><b>Diagnoses</b></h5>
+    <ul class="w3-ul w3-card-4 w3-white">
+      <li class="w3-padding-16">
+        <span class="w3-xlarge">Diabetes</span><br>
+      </li>
+	  <li class="w3-padding-16">
+        <span class="w3-xlarge">Renal Disease</span><br>
+      </li>
+      <li class="w3-padding-16">
+        <span class="w3-xlarge">Nephropathy</span><br>
+      </li>
+      <li class="w3-padding-16">
+        <span class="w3-xlarge">Cerebrovascular Accident (Stroke)</span><br>
+      </li>
+    </ul>
   </div>
+  <hr>
+  
+<div class="w3-container"> 
+	<a href="/medications/new"><button class="w3-button w3-black" href="/medications/new">Add New Diagnosis</button></a>
+</div>
+  <br>
   <div class="w3-container w3-dark-grey w3-padding-32">
     <div class="w3-row">
       <div class="w3-container w3-half">
@@ -53,7 +41,7 @@
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">MediHub</a></p>
+    <p>Powered by <a href="/" target="_blank">MediHub</a></p>
   </footer>
 
   <!-- End page content -->
@@ -83,5 +71,4 @@ function w3_close() {
   overlayBg.style.display = "none";
 }
 </script>
-
 <% include partials/footer %>

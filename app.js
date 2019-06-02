@@ -10,6 +10,7 @@ mongoose.connect("mongodb://localhost/medihub");
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
+app.use('/public', express.static('public'));
 
 // Medication Schema
 let medicationSchema = new mongoose.Schema({
@@ -38,8 +39,11 @@ let Medication = mongoose.model("Medication", medicationSchema);
 //         }
 //     }
 // );
-
 app.get("/", (req, res) => {
+    res.render("landingPage");
+});
+
+app.get("/home", (req, res) => {
     res.render("home");
 });
 
@@ -77,6 +81,10 @@ app.post("/medications", (req, res) => {
 
 app.get("/medications/new", (req, res) => {
     res.render("newMedication");
+});
+
+app.get("/diagnoses", (req, res) => {
+    res.render("diagnoses");
 });
 
 app.listen(port, hostname, () => {

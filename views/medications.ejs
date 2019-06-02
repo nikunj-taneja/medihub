@@ -1,11 +1,94 @@
 <% include partials/header %>
-
-<h1>Welcome to MediHub!</h1>
-<h2>Medicaitons: </h2>
-<ul>
-    <% meds.forEach((med) => { %>
-        <li><%= med.name %></li>
-    <% }); %>
-</ul>
-<a href="/medications/new">Add new medication</a>
+        <div class="w3-container">
+          <h5><b>Medications</b></h5>
+          <ul class="w3-ul w3-card-4 w3-white">
+            <li class="w3-padding-16">
+              <span class="w3-xlarge">Metformin</span><br>
+                      <div class="w3-right-align"> 
+                  <div class="w3-dropdown-hover">
+                  <button class="w3-button w3-black">Times and Amounts</button>
+                  <div class="w3-dropdown-content w3-bar-block w3-border">
+                      <a href="#" class="w3-bar-item w3-button"> 40 mg @ 7:00am</a>
+                      <a href="#" class="w3-bar-item w3-button"> 40 mg @ 12:00pm</a>
+                  </div>
+              </div>
+              </div>
+              <br>
+              <div class="w3-right-align"><i>Reminder: Take in 20 mins</i></div>
+              <div class="w3-xlarge"><i>Medicine Taken:	</i> <input type="checkbox"></div>
+            </li>
+            <li class="w3-padding-16">
+              <span class="w3-xlarge">Glipizide</span><br>
+              <div class="w3-right-align"> 
+                  <div class="w3-dropdown-hover">
+                  <button class="w3-button w3-black">Times and Amounts</button>
+                  <div class="w3-dropdown-content w3-bar-block w3-border">
+                      <a href="#" class="w3-bar-item w3-button"> 20 mg @ 10:00am</a>
+                      <a href="#" class="w3-bar-item w3-button"> 20 mg @ 5:00pm</a>
+                  </div>
+              </div>
+              </div>
+              <br>
+              <div class="w3-right-align"><i>Reminder: Take in 1 hr 30 mins</i></div>
+              <div class="w3-xlarge"><i>Medicine Taken:	</i> <input type="checkbox"></div>
+            </li>
+          </ul>
+        </div>
+        <hr>
+      
+      <div class="w3-container"> 
+          <a href="medications/new" class="w3-button w3-black"> Add New Medication</a>
+      </div>
+      <br>
+       
+        <div class="w3-container w3-dark-grey w3-padding-32">
+          <div class="w3-row">
+            <div class="w3-container w3-half">
+              <h5 class="w3-bottombar w3-border-green">Contact Us</h5>
+              <p>Feedback Form</p>
+              <p>Contact Us</p>
+              <p>Centers</p>
+            </div>
+            <div class="w3-container w3-half">
+              <h5 class="w3-bottombar w3-border-red">Company Info</h5>
+              <p>Founders</p>
+              <p>Employees</p>
+              <p>About Us</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Footer -->
+        <footer class="w3-container w3-padding-16 w3-light-grey">
+          <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">MediHub</a></p>
+        </footer>
+      
+        <!-- End page content -->
+      </div>
+      
+      <script>
+      // Get the Sidebar
+      var mySidebar = document.getElementById("mySidebar");
+      
+      // Get the DIV with overlay effect
+      var overlayBg = document.getElementById("myOverlay");
+      
+      // Toggle between showing and hiding the sidebar, and add overlay effect
+      function w3_open() {
+        if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+          overlayBg.style.display = "none";
+        } else {
+          mySidebar.style.display = 'block';
+          overlayBg.style.display = "block";
+        }
+      }
+      
+      // Close the sidebar with the close button
+      function w3_close() {
+        mySidebar.style.display = "none";
+        overlayBg.style.display = "none";
+      }
+      </script>
+      
 <% include partials/footer %>
